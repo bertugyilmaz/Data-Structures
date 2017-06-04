@@ -13,6 +13,11 @@ namespace Queue
         private int size = 0;
         private int rear = -1;
         private int front = -1;
+        public CircularArrayTypedQueue(int size)
+        {
+            this.size = size;
+            Queue = new object[size];
+        }
         public void Insert(object value)
         {
             if (count == size ) { throw new Exception("Hata! Queue Dolu."); }
